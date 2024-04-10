@@ -153,35 +153,6 @@ export const MyLayout = (props: Props) => {
                         ];
                     }}
 
-                    // footerRender={() => {
-                    //     return (
-                    //         <div
-                    //             style={{
-                    //                 textAlign: 'center',
-                    //                 paddingBlockStart: 12,
-                    //                 // flexShrink: 0,
-                    //             }}
-                    //         >
-                    //             <div>© 2023 Digital Minds</div>
-                    //         </div>
-                    //     );
-                    // }}
-
-
-                    // menuFooterRender={(props) => {
-                    //     if (props?.collapsed) return undefined;
-                    //     return (
-                    //         <div
-                    //             style={{
-                    //                 textAlign: 'center',
-                    //                 paddingBlockStart: 12,
-                    //             }}
-                    //         >
-                    //             <div>© 2023 Digital Minds</div>
-                    //         </div>
-                    //     );
-                    // }}
-
 
                     logo={
                         <Link to="/">

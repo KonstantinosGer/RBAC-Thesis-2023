@@ -243,7 +243,8 @@ func GetEmployeeUsers() gin.HandlerFunc {
 		}
 
 		// Get all users associated with this employee
-		err = database.Debug().Table("users").Joins("JOIN employees ON users.employee_id = employees.id").
+		err = database.Debug().Table("users").
+			Joins("JOIN employees ON users.employee_id = employees.id").
 			Select("users.id, users.email").
 			Where("employees.id = ?", employee.Id).
 			Find(&associatedUsers).Error

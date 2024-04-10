@@ -243,7 +243,7 @@ func DeleteCustomerUserAssociation(enforcer *casbin.SyncedEnforcer) gin.HandlerF
 		//
 		// Delete user's permissions, specifically for this customer
 		//
-		// Remove financial policy for user, if exists
+		// Remove financial policy from user, if exists
 		if enforcer.HasPolicy(user.Id, fmt.Sprintf("portal::data::%d::finance", customer.Id), "read") {
 			_, err = enforcer.RemovePolicy(user.Id, fmt.Sprintf("portal::data::%d::finance", customer.Id), "read")
 			if err != nil {
@@ -252,7 +252,7 @@ func DeleteCustomerUserAssociation(enforcer *casbin.SyncedEnforcer) gin.HandlerF
 				return
 			}
 		}
-		// Remove performance policy for user, if exists
+		// Remove performance policy from user, if exists
 		if enforcer.HasPolicy(user.Id, fmt.Sprintf("portal::data::%d::performance", customer.Id), "read") {
 			_, err = enforcer.RemovePolicy(user.Id, fmt.Sprintf("portal::data::%d::performance", customer.Id), "read")
 			if err != nil {

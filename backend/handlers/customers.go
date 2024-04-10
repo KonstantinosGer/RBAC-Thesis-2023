@@ -286,7 +286,9 @@ func GetCustomerUsers(enforcer *casbin.SyncedEnforcer) gin.HandlerFunc {
 			HasFinancialAccess   bool   `json:"has_financial_access"`
 		}
 
-		err = database.Debug().Table("users").Joins("JOIN customer_user ON customer_user.user_id = users.id").
+		err = database.Debug().
+			Table("users").
+			Joins("JOIN customer_user ON customer_user.user_id = users.id").
 			Joins("JOIN customers ON customers.id = customer_user.customer_id").
 			Where("customers.id = ?", customer.Id).
 			Select("users.id, users.email, 0 AS has_performance_access, 0 AS has_financial_access").

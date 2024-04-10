@@ -2,11 +2,10 @@ package middleware
 
 import (
 	"context"
-	"net/http"
-	"strings"
-
 	"firebase.google.com/go/auth"
 	"github.com/gin-gonic/gin"
+	"net/http"
+	"strings"
 )
 
 // AuthMiddleware : to verify all authorized operations

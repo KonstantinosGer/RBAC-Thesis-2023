@@ -138,10 +138,7 @@ const Roles = (props: Props) => {
                             controlled={true}
                             value={dataSource}
                             onChange={(dataSource) => setDataSource(dataSource as any)}
-
-                            //Το βάζω false αν δε θέλω να προσθέτει γραμμή
                             recordCreatorProps={false}
-
                             pagination={{pageSize: 8, hideOnSinglePage: true, showQuickJumper: true}}
                             editable={{
                                 type: 'single',

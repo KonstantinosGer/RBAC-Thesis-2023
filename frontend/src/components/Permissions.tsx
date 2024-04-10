@@ -1,29 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {
-    Button,
-    Card,
-    Checkbox,
-    Col,
-    ConfigProvider,
-    Divider,
-    Layout,
-    Menu,
-    message,
-    notification,
-    Popconfirm,
-    Row,
-    Space,
-    Spin,
-    Typography
-} from 'antd';
-import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
+import { Button, Card, Checkbox, Col, ConfigProvider, Divider, Layout, Menu, message, notification, Popconfirm, Row, Space, Spin, Typography } from 'antd';
+import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import {ModalForm, PageContainer, ProFormText} from "@ant-design/pro-components";
 import {Role} from "./Roles";
 import enUSIntl from "antd/lib/locale/en_US";
 import axiosApiInstance from "../api/axiosClient";
 
 const {Content, Sider} = Layout;
-
 
 type Props = {};
 
@@ -123,7 +106,7 @@ const Permissions = (props: Props) => {
             setLoadingRoles(false)
         } catch (e: any) {
             setLoadingRoles(false)
-            notification.error({message: e.response.data.message})
+            // notification.error({message: e.response.data.message})
             return []
         }
     }

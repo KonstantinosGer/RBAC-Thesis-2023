@@ -137,7 +137,7 @@ const Home: React.FC = () => {
                                 index={2}
                                 title="Employees"
                                 href="/employees"
-                                desc="All Digital Minds' members"
+                                desc="All DM members"
                             />
                         </Col>
                         <Col span={8}>
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
                                 index={3}
                                 title="Customers"
                                 href="/customers"
-                                desc="All Digital Minds' clients"
+                                desc="All DM clients"
                             />
                         </Col>
                     </Row>

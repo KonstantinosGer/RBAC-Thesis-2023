@@ -53,7 +53,6 @@ export function UserLogin(props: Props) {
             backgroundImageUrl="https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png"
             logo={<Logo fill='#006d75'
                         style={{width: 400, height: 200, marginTop: -70, marginLeft: -170}}/>}
-            // title="Digital Minds"
             subTitle={<>Role Based Access Control System</>}
 
             submitter={{submitButtonProps: {style: {display: "none"}}}}

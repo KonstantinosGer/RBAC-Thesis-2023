@@ -63,7 +63,6 @@ const Users = (props: Props) => {
         <PageContainer>
 
             <ConfigProvider locale={enUSIntl}>
-
                 <Row justify={"end"}>
                     <ModalForm<{ email: string, password: string }>
                         title="Add new user to firebase"
